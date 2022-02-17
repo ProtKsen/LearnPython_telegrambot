@@ -45,7 +45,7 @@ def main():
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(CommandHandler("planet", print_planet_constellation))
-    dp.add_handler(MessageHandler(Filters.text & (~Filters.command), talk_to_me))
+    dp.add_handler(MessageHandler(Filters.text, talk_to_me))
 
     logging.info("Бот стартовал")
     mybot.start_polling()
